@@ -10,6 +10,10 @@ I'll be using this repository as a personal knowledge-base. Here you'll find cod
 
 If you'd like to contribute to this project, reach out to me on social media or create a pull request with necessary changes.
 
+## Viewing
+
+For the best viewing experience use [Obsidian.md](https://obsidian.md/)
+
 ## Other Resources
 
 - [The Digital Life](https://www.youtube.com/c/TheDigitalLifeTech)
