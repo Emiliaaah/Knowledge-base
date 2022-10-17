@@ -12,6 +12,7 @@ Documentation: [Gitlab Runner Docs](https://docs.gitlab.com/runner/)
 You can make use of [[YAML]] anchors to make templates which you can use again, so you don't have to have duplicate code.
 
 More info: [Gitlab Docs](https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#yaml-anchors-for-scripts)
+Stackoverflow: [Stackoverflow](https://stackoverflow.com/questions/54074433/gitlab-ci-specifying-stages-in-before-script)
 
 ```yaml
 image: docker:20
@@ -50,6 +51,7 @@ Build:
 Just like anchors you can use extends to reuse the same config in multiple places. Below you can find an example of this with `before_script`.
 
 More info: [Gitlab Docs](https://docs.gitlab.com/ee/ci/yaml/#extends)
+Stackoverflow: [Stackoverflow](https://stackoverflow.com/questions/54074433/gitlab-ci-specifying-stages-in-before-script)
 
 ```yml
 image: docker:20
