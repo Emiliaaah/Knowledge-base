@@ -94,7 +94,9 @@ For this you'll want to add some CI/CD variables to you project (or group if you
 
 We'll start by adding a variable for the SSH key. If you haven't made one do so now. Make sure the variable settings are the same as the following.
 
-> [!WARNING] When pasting in your SSH key make sure you add a new line at the end
+Stackoverflow: [Link](https://stackoverflow.com/a/59595773)
+
+> [!WARNING] When pasting in your SSH key make sure there's a new line at the end
 
 ```yml
 Key: ID_RSA
