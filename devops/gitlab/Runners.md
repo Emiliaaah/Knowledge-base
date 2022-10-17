@@ -11,7 +11,7 @@ Documentation: [Gitlab Runner Docs](https://docs.gitlab.com/runner/)
 
 You can make use of [[YAML]] anchors to make templates which you can use again, so you don't have to have duplicate code.
 
-Source: [Gitlab Docs](https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#yaml-anchors-for-scripts)
+More info: [Gitlab Docs](https://docs.gitlab.com/ee/ci/yaml/yaml_optimization.html#yaml-anchors-for-scripts)
 
 ```yaml
 image: docker:20
