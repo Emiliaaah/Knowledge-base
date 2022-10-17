@@ -51,7 +51,7 @@ Build:
 Just like anchors you can use extends to reuse the same config in multiple places. Below you can find an example of this with `before_script`.
 
 More info: [Gitlab Docs](https://docs.gitlab.com/ee/ci/yaml/#extends)
-Stackoverflow: [Link](https://stackoverflow.com/questions/54074433/gitlab-ci-specifying-stages-in-before-script)
+Stackoverflow: [Link](https://stackoverflow.com/a/54077634)
 
 ```yml
 image: docker:20
