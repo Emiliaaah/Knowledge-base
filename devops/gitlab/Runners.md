@@ -81,3 +81,68 @@ Build:
       .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
 ```
+
+---
+
+## SSH
+
+### SSH key
+
+For this you'll want to add some CI/CD variables to you project (or group if you want to use them in multiple projects). You can find these in your project under: Settings > CI/CD > Variables
+
+We'll start by adding a variable for the SSH key. If you haven't made one do so now. Make sure the variable settings are the same as the following.
+
+> [!WARNING] When pasting in your SSH key make sure you add a new line at the end
+
+```yml
+Key: ID_RSA
+Type: File
+Environment Scope: All (default)
+Protect variable: ✔
+Mask variable: ✖
+```
+
+### Server IP
+
+For us to connect via ssh we'll also need the server ip address. Make a new Variable with the following settings.
+
+```yml
+Key: SERVER_IP
+Value: <your server ip>
+Type: Variable
+Environment scope: All (default)
+Protect variable: ✔
+Mask variable: ✔
+```
+
+### User
+
+The last thing we'll need is the username of the user on the remote server. You probably know the drill by now, just make sure your settings look like the following.
+
+```yml
+Key: SERVER_USER
+Value: <username of the remote user>
+Type: Variable
+Environment scope: All (default)
+Protect variable: ✔
+Mask variable: ✔
+```
+
+### Example
+
+Now the only thing left is to actually use these variables in our `.gitlab-ci.yml` file. Below you can find an example you can adapt to your own use case, it's only an example after all.
+
+```yml
+stages:
+  - distro
+
+Get distro:
+  image: alpine:latest
+  stage: distro
+  script:
+    - chmod og= $ID_RSA
+    - apk update && apk add openssh-client
+    - ssh -i $ID_RSA -o StrictHostKeyChecking=no $SERVER_USER@$SERVER_IP "lsb_release -a"
+```
+
+---
